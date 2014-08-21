@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="components/normalize.css">
+  <link rel="stylesheet" href="components/main.css">
   <style>
     [ng-cloak] {
       display: none;
     }
   </style>
-  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="components/modernizr-2.6.2.min.js"></script>
   <script>
     // include angular loader, which allows the files to load in any order
     //@@NG_LOADER_START@@
@@ -28,8 +28,8 @@
 
     // load all of the dependencies asynchronously.
     $script([
-      'bower_components/angular/angular.js',
-      'bower_components/angular-route/angular-route.js',
+      'https://code.angularjs.org/1.2.22/angular.js',
+      'https://code.angularjs.org/1.2.22/angular-route.js',
       'js/app.js',
       'js/services.js',
       'js/controllers.js',
@@ -37,7 +37,7 @@
       'js/directives.js'
     ], function() {
       // when all is done, execute bootstrap angular application
-      angular.bootstrap(document, ['myApp']);
+      angular.bootstrap(document, ['ramacenApp']);
     });
   </script>
   <title>My AngularJS App</title>

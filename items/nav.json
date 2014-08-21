@@ -1,13 +1,13 @@
 [
   {
     "id"    : 0,
-    "href"  : "/view1",
+    "href"  : "/home",
     "label" : "Vista 1",
     "sub"   : false
   },
   {
     "id"    : 1,
-    "href"  : "/view2",
+    "href"  : "/detail",
     "label" : "Vista 2",
     "sub"   : false
   }

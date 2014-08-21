@@ -12,8 +12,9 @@ angular.module('ramacenApp', [
 ]).
 config(['$routeProvider', '$locationProvider', function($routeProvider,$locationProvider) {
 	$locationProvider.html5Mode(true).hashPrefix('!');
-  $routeProvider.when('/view1', {templateUrl: '/partials/partial1.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/view2', {templateUrl: '/partials/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.when('/home', {templateUrl: '/partials/home.html', controller: 'HomeCtrl'});
+  $routeProvider.when('/detail/:itemId', {templateUrl: '/partials/detail.html', controller: 'DetailCtrl'});
+  $routeProvider.otherwise({redirectTo: '/home'});
   //$routeProvider.therwise({templateUrl: '/partials/partial1.html'});
 }]);
+

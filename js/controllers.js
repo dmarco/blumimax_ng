@@ -3,15 +3,65 @@
 /* Controllers */
 
 angular.module('ramacenApp.controllers', [])
-  .controller('MyCtrl1', ['$scope', function($scope) {
+  
+
+
+
+  //==========================================================
+  // HOME
+  .controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
+
+    $http.get('items/items.json').success(function(data) {
+      $scope.items = data;
+    });
+
+    $scope.order = [
+      { name:'Alfabético', value:'name' },
+      { name:'Menor Precio', value:'age' },
+      { name:'Mayor Precio', value:'id' },
+      { name:'Destacados', value:'snippet' }
+    ];
+    //$scope.selectOrder = $scope.order[0].value; 
+
+    $scope.maxSize = 4;
+    $scope.bigTotalItems = 22;
+    $scope.bigCurrentPage = 1;
 
   }])
-  .controller('MyCtrl2', ['$scope', function($scope) {
+  
 
+
+
+  //==========================================================
+  // DETAIL
+  .controller('DetailCtrl', ['$scope', '$routeParams', 'Item', function($scope, $routeParams, Item) {
+    $scope.item = Item.get({itemId: $routeParams.itemId}, function(item) {
+      //console.log('>>>>>',item.images[0]);
+      //$scope.mainImageUrl = item.images[0];
+      //$scope.img = 'hola';
+      $scope.name = "hola";
+    });
+    //$scope.setImage = function(imageUrl) {
+      //console.log('<<<<<<',imageUrl);
+      //$scope.mainImageUrl = imageUrl;
+    //}
   }])
+  
+
+
+
+
+  //==========================================================
+  // FOOTER
   .controller('FooterCtrl', ['$scope', function($scope) {
 
   }])
+
+
+
+
+  //==========================================================
+  // NAVIGATION
   .controller('NavCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
   	// JSon navbars data
   	console.log("Loading Json....");
@@ -20,11 +70,17 @@ angular.module('ramacenApp.controllers', [])
       console.log("Json Loaded!");
     });    
   }])
+
+
+
+
+  //==========================================================
+  // CAROUSEL
   .controller('CarouselDemoCtrl', ['$scope', function($scope) {
   	$scope.myInterval = 5000;
 	  var slides = $scope.slides = [];
 	  $scope.addSlide = function() {
-	    var newWidth = 600 + slides.length;
+	    var newWidth = 601 + slides.length;
 	    slides.push({
 	      image: 'http://placekitten.com/' + newWidth + '/300',
 	      text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
