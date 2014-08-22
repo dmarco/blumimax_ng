@@ -1,0 +1,235 @@
+{ 
+  
+  "ar":
+  [
+    {
+      "id": 0, 
+      "name": "piscinas", 
+      "subcategoria": [
+        {
+          "id": 0, 
+          "name": "bombas autocebantes"
+        },
+        {
+          "id": 0, 
+          "name": "bombas autodrenantes"
+        },
+        {
+          "id": 0, 
+          "name": "bombas centrifugas"
+        },
+        {
+          "id": 0, 
+          "name": "filtros para piscinas tradicionales"
+        },
+        {
+          "id": 0, 
+          "name": "filtros portatiles"
+        },
+        {
+          "id": 0, 
+          "name": "carga filtrante"
+        },
+        {
+          "id": 0, 
+          "name": "clorinador de agua para piscinas"
+        },
+        {
+          "id": 0, 
+          "name": "limpia fondos"
+        },
+        {
+          "id": 0, 
+          "name": "mangueras"
+        },
+        {
+          "id": 0, 
+          "name": "boyas dosificadoras de cloro"
+        },
+        {
+          "id": 0, 
+          "name": "cuchara dosificadora de cloro"
+        },
+        {
+          "id": 0, 
+          "name": "escaleras"
+        },
+        {
+          "id": 0, 
+          "name": "multivalvulas"
+        },
+        {
+          "id": 0, 
+          "name": "skimmer"
+        },
+        {
+          "id": 0, 
+          "name": "toma de fondo"
+        },
+        {
+          "id": 0, 
+          "name": "trampa de pelos"
+        },
+        {
+          "id": 0, 
+          "name": "acoples"
+        },
+        {
+          "id": 0, 
+          "name": "retornos orientables"
+        },
+        {
+          "id": 0, 
+          "name": "iluminacion"
+        },
+        {
+          "id": 0, 
+          "name": "saca hojas"
+        },
+        {
+          "id": 0, 
+          "name": "laboratorio"
+        },
+        {
+          "id": 0, 
+          "name": "productos quimicos"
+        }
+      ]
+    },
+    {
+      "id": 1, 
+      "name": "generadores", 
+      "subcategoria": [
+        {
+          "id": 0, 
+          "name": "electricos honda"
+        },
+        {
+          "id": 0, 
+          "name": "powered by honda"
+        }
+      ]
+    },
+    {
+      "id": 2, 
+      "name": "motobombas", 
+      "subcategoria": [
+        {
+          "id": 0, 
+          "name": "honda"
+        }
+      ]
+    },
+    {
+      "id": 3, 
+      "name": "linea jardin", 
+      "subcategoria":[ 
+        {
+          "id": 0, 
+          "name": "cortadoras de cesped"
+        },
+        {
+          "id": 0, 
+          "name": "motoguadañas"
+        }
+      ]
+    },
+    {
+      "id": 4, 
+      "name": "motores", 
+      "subcategoria": [
+        {
+          "id": 0, 
+          "name": "estacionarios honda"
+        },
+        {
+          "id": 0, 
+          "name": "motores motorarg"
+        }
+      ]
+    },
+    {
+      "id": 5, 
+      "name": "motosoldadoras", 
+      "subcategoria": [
+        {
+          "id": 0, 
+          "name": "motores eléctricos monofásicos"
+        },
+        {
+          "id": 0, 
+          "name": "motores eléctricos trifásicos"
+        },
+        {
+          "id": 0, 
+          "name": "presurización/circulación"
+        },
+        {
+          "id": 0, 
+          "name": "circuladoras para agua caliente"
+        },
+        {
+          "id": 0, 
+          "name": "circuladoras con purgador de aire"
+        }
+      ]
+    },
+    {
+      "id": 6, 
+      "name": "ups", 
+      "subcategoria": [
+        {
+          "id": 0, 
+          "name": "powered by honda"
+        },
+        {
+          "id": 0, 
+          "name": "motosoldadoras dogo"
+        }
+      ]
+    },
+    {
+      "id": 7, 
+      "name": "cargadores de bateria", 
+      "subcategoria": [
+        {
+          "id": 0, 
+          "name": "eaton"
+        },
+        {
+          "id": 0, 
+          "name": "emerson"
+        }
+      ]
+    },
+    {
+      "id": 8, 
+      "name": "estabilizadores de tension",
+      "subcategoria": false
+    },
+    {
+      "id": 9, 
+      "name": "inversores de tension",
+      "subcategoria": false
+    },
+    {
+      "id": 10, 
+      "name": "compresores",
+      "subcategoria": false
+    }
+
+  ],
+
+  "uy":
+  [
+    {"xxx": "xxx"}
+  ],
+
+  "cl":
+  [
+    {"xxx": "xxx"}
+  ]
+
+}
+
+

@@ -13,30 +13,30 @@
   <meta name="fragment" content="!">
   <base href="/">
 
-  <!-- Metas -->
+  <!-- METAS -->
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- Components -->
+  <!-- COMPONENTS -->
   <link rel="stylesheet" href="components/normalize.css">
   <link rel="stylesheet" href="components/bootstrap.css">
   <link rel="stylesheet" href="components/sticky-footer-navbar.css">
   <link rel="stylesheet" href="components/main.css">
 
-  <!-- Styles -->
+  <!-- STYLES -->
   <link rel="stylesheet" href="css/app.css"/>
   
-  <!-- Modernizr -->
+  <!-- MODERNIZR -->
   <script src="components/modernizr-2.6.2.min.js"></script>
 
 </head>
-<body>
+<body ng-controller="MainCtrl">
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <div 
     class="navbar navbar-inverse" 
     role="navigation" 
@@ -44,23 +44,31 @@
     ng-controller="NavCtrl">    
   </div>
 
-  <!-- Renders -->
+  <!-- MIGA DE PAN -->
+  <div class="container">
+    <ol class="breadcrumb" ng-controller="BreadcrumbCtrl">
+      <li><a href="home">Home</a></li>
+      <!-- <li ng-repeat="crumb in breadcrumb"><a href="{{crumb.href}}">{{crumb.name}}</a></li> -->
+    </ol>
+  </div>
+
+  <!-- RENDERS -->
   <div class="container" ng-view></div>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <div class="footer">
     <div class="container">
       <p class="text-muted">Place sticky footer content here.</p>
     </div>
   </div>
   
-  <!-- Components -->
+  <!-- COMPONENTS -->
   <script src="https://code.angularjs.org/1.2.22/angular.js"></script>
   <script src="https://code.angularjs.org/1.2.22/angular-route.js"></script>
   <script src="components/ui-bootstrap.min.js"></script>
   <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
 
-  <!-- Scripts -->
+  <!-- SCRIPTS -->
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>

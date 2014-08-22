@@ -6,6 +6,23 @@ angular.module('ramacenApp.controllers', [])
   
 
 
+  
+  //==========================================================
+  // MAIN
+  .controller('MainCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+    
+  }])
+
+
+  
+
+  //==========================================================
+  // MAIN
+  .controller('BreadcrumbCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+  }])
+
+
+
 
   //==========================================================
   // HOME
@@ -13,8 +30,11 @@ angular.module('ramacenApp.controllers', [])
 
     $http.get('items/items.json').success(function(data) {
       $scope.items = data;
-      $scope.categories = data;
     });
+
+    $scope.filter = function(val){
+      $scope.query = val;
+    }
 
     $scope.order = [
       { name:'Alfabético', value:'name' },
@@ -29,9 +49,22 @@ angular.module('ramacenApp.controllers', [])
     $scope.bigCurrentPage = 1;
 
   }])
+
+
+
+
+
+  //==========================================================
+  // CATEGORIES
+  .controller('CategoryCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+    $http.get('items/categories.json').success(function(data) {
+      $scope.categories = data['ar'];
+    });
+  }])
+
+
   
-
-
+  
 
   //==========================================================
   // DETAIL

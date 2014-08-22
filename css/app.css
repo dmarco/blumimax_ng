@@ -11,3 +11,8 @@
 	height: 55px;
 	overflow: hidden;
 }
+.btn-group-vertical > .btn-group > .btn,
+.btn-group-vertical > .btn-group > ul > li > a,
+.btn-group-vertical > .btn {
+	text-transform: capitalize;
+}

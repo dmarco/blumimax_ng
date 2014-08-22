@@ -1,13 +1,31 @@
 <div class="row row-offcanvas row-offcanvas-right">
   
-  <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-    <div class="list-group">
-      <a href="#" class="list-group-item" ng-repeat="category in categories | filter:query | orderBy:catOrder">{{category.category}}</a>
+  <!-- FILTRO CATEGORIA -->
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas" role="navigation" ng-controller="CategoryCtrl">
+    <div class="btn-group-vertical">
+      
+      <!-- SI TIENE SUBCATEGORÍA -->
+      <div class="btn-group" dropdown is-open="status.isopen" ng-if="category.subcategoria !== false" ng-repeat="category in categories">
+        <button type="button" class="btn btn-default dropdown-toggle" ng-disabled="disabled" ng-click="filter(category.name)">
+          {{category.name}} 
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li ng-repeat="subcategory in $parent.category.subcategoria"><a href="" ng-click="filter(subcategory.name)">{{subcategory.name}}</a></li>
+        </ul>
+      </div>
+      <!-- SI NO TIENE SUBCATEGORÍA -->
+      <button type="button" class="btn btn-default" ng-if="category.subcategoria === false" ng-repeat="category in categories">
+        {{category.name}} 
+      </button>
+    
     </div>
-  </div><!--/span-->
+  </div>
 
+  <!-- CONTENEDOR -->
   <div class="col-xs-12 col-sm-9">
 
+    <!-- BUSCADOR -->
     <div class="row">
       <div class="col-sm-7">
         <input type="text" class="form-control" placeholder="Buscar" ng-model="query">
@@ -18,9 +36,9 @@
         </select>
       </div>
     </div>
-
-    <hr />
+    <hr>
     
+    <!-- SLIDER -->
     <div ng-controller="CarouselDemoCtrl">
       <div style="height: 305px">
         <carousel interval="myInterval">
@@ -34,9 +52,11 @@
         </carousel>
       </div>
     </div>
-    
+
+    <!-- THUMBNAILS -->
     <div class="row">
       
+      <!-- THUMBNAIL REPEATER -->
       <div class="col-6 col-sm-6 col-lg-4" ng-repeat="item in items | filter:query | orderBy:selectOrder">
         <div class="thumbnail">
           <img src="http://placekitten.com/320/240" alt="...">
@@ -50,6 +70,7 @@
       
     </div>
 
+    <!-- PAGINADOR -->
     <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
     <pre>Page: {{bigCurrentPage}} / {{numPages}}</pre>
 
