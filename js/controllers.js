@@ -13,6 +13,7 @@ angular.module('ramacenApp.controllers', [])
 
     $http.get('items/items.json').success(function(data) {
       $scope.items = data;
+      $scope.categories = data;
     });
 
     $scope.order = [
@@ -34,17 +35,10 @@ angular.module('ramacenApp.controllers', [])
 
   //==========================================================
   // DETAIL
-  .controller('DetailCtrl', ['$scope', '$routeParams', 'Item', function($scope, $routeParams, Item) {
-    $scope.item = Item.get({itemId: $routeParams.itemId}, function(item) {
-      //console.log('>>>>>',item.images[0]);
-      //$scope.mainImageUrl = item.images[0];
-      //$scope.img = 'hola';
-      $scope.name = "hola";
+  .controller('DetailCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+    $http.get('items/' + $routeParams.itemId + '.json').success(function(data) {
+      $scope.phone = data;
     });
-    //$scope.setImage = function(imageUrl) {
-      //console.log('<<<<<<',imageUrl);
-      //$scope.mainImageUrl = imageUrl;
-    //}
   }])
   
 
