@@ -1,0 +1,22 @@
+{ 
+
+  "ar":
+  [
+
+    {
+      "id": 0, 
+      "name": "bomba honda",
+      "category": "piscinas", 
+      "subcategory": "bombas autocebantes",
+      "images": [
+        {"path": "img/phones/motorola-xoom-with-wi-fi.0.jpg"},
+        {"path": "img/phones/motorola-xoom-with-wi-fi.0.jpg"},
+        {"path": "img/phones/motorola-xoom-with-wi-fi.0.jpg"},
+        {"path": "img/phones/motorola-xoom-with-wi-fi.0.jpg"},
+        {"path": "img/phones/motorola-xoom-with-wi-fi.0.jpg"}
+      ]
+    }
+    
+  ]
+
+}

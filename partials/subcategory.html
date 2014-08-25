@@ -5,8 +5,8 @@
     <div class="btn-group-vertical">
 
       <ul class="list-group">
-        <li class="list-group-item" ng-repeat="category in categories | orderBy:categoryOrder">
-          <a href="/productos/{{ category.name | nospace }}">{{ category.name | noaccents }}</a>
+        <li class="list-group-item" ng-repeat="subcategory in subcategories">
+          <a href="/{{ categoryURL | nospace }}/{{ subcategory.name | nospace }}">{{subcategory.name}}</a>
         </li>
       </ul>
     
@@ -28,21 +28,6 @@
       </div>
     </div>
     <hr>
-    
-    <!-- SLIDER -->
-    <div ng-controller="CarouselDemoCtrl" ng-show="carouselShow">
-      <div style="height: 305px">
-        <carousel interval="myInterval">
-          <slide ng-repeat="slide in slides" active="slide.active">
-            <img ng-src="{{slide.image}}" style="margin:auto;">
-            <div class="carousel-caption">
-              <h4>Slide {{$index}}</h4>
-              <p>{{slide.text}}</p>
-            </div>
-          </slide>
-        </carousel>
-      </div>
-    </div>
 
     <!-- THUMBNAILS -->
     <div class="row">

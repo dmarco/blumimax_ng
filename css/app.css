@@ -1,7 +1,9 @@
 /* app css stylesheet */
-
 .navbar {
   border-radius: 0px; 
+}
+.thumbnail .caption {
+	text-transform: capitalize;
 }
 .thumbnail .caption h3 {
 	height: 55px;
@@ -11,8 +13,12 @@
 	height: 55px;
 	overflow: hidden;
 }
-.btn-group-vertical > .btn-group > .btn,
-.btn-group-vertical > .btn-group > ul > li > a,
+.btn-group-vertical > ul > li > a,
 .btn-group-vertical > .btn {
+	text-transform: capitalize;
+}
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+ol.breadcrumb li a {
 	text-transform: capitalize;
 }
