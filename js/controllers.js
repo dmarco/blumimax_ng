@@ -38,7 +38,7 @@ angular.module('ramacenApp.controllers', [])
   //==========================================================
   // HOME
   .controller('HomeCtrl', ['$scope', '$rootScope', '$routeParams', '$location', '$filter', function($scope, $rootScope, $routeParams, $location, $filter) {
-
+    
     // CAROUSEL
     $scope.carouselShow = true;
 
@@ -64,6 +64,36 @@ angular.module('ramacenApp.controllers', [])
     $scope.bigTotalItems = 22;
     $scope.bigCurrentPage = 1;
 
+
+
+
+
+    
+    // LISTENER ON CHANGE ROUTE 
+    $scope.$on('$routeChangeSuccess', function (event, current, previous) {
+      console.log( $location.path() );
+    });
+    
+
+
+
+
+    /*$scope.categoryNestedMenu = function(url){
+
+      // BUSCA EL VALOR DEL MENU EN CATEGORIAS
+      var dataFiltered = $filter('filter')( $scope.categories, function (d) { return d.name === url; })[0];
+
+      // SI TIENE SUBCATEGORIA NESTEA EL MENU
+      if( dataFiltered.subcategoria !== undefined ){
+        $scope.categories = dataFiltered.subcategoria;
+        $scope.categoryOrder = 'name';
+      }
+
+      $scope.$apply( $location.path( "/asdasda/" ) );
+
+    }*/
+
+    /*
     // LISTENER ON CHANGE ROUTE 
     $scope.$on('$routeChangeSuccess', function (event, current, previous) {
       
@@ -72,18 +102,18 @@ angular.module('ramacenApp.controllers', [])
 
       // TRAE DATA POR PAIS
       var categories = $scope.categories;
-      
+
+      //var filterYesSpace = $filter('yesspace');
+      //console.log( filterYesSpace($routeParams.catID) );
+ 
       // FILTRO DATOS BUSCANDO LA CATEGORIA
       if( $routeParams.catID ){
         
         var categoryID = $routeParams.catID.replace(/-/g, ' ');
         var dataFiltered = $filter('filter')( categories, function (d) { return d.name === categoryID; })[0];
-                
-        if( dataFiltered ){
+
+        if( dataFiltered.subcategoria ){
           $scope.categories = dataFiltered.subcategoria;
-          $scope.categoryOrder = 'name'; 
-        }else{
-          $scope.categories = $scope.categories;
           $scope.categoryOrder = 'name'; 
         }
         
@@ -93,7 +123,9 @@ angular.module('ramacenApp.controllers', [])
       //   //console.log("poipio");
       // }
       //$scope.breadcrum = arrLocation.splice(1);
-    });
+   
+   });
+    */
 
   }])
 
@@ -103,16 +135,24 @@ angular.module('ramacenApp.controllers', [])
 
   //==========================================================
   // CATEGORIES
-  .controller('CategoryCtrl', ['$scope', '$rootScope', '$routeParams', '$filter', function($scope, $rootScope, $routeParams, $filter) {
+  .controller('CategoryFilterCtrl', ['$scope', '$rootScope', '$routeParams', '$filter', function($scope, $rootScope, $routeParams, $filter) {
 
-    // TRAE DATA POR PAIS
-    var categories = $rootScope.categories;
-    // FILTRO DATOS BUSCANDO LA CATEGORIA
-    var dataFiltered = $filter('filter')(categories, function (d) {return d.name === $routeParams.catId;})[0];
-    // ARMA MENU SUBCATEGORIAS
-    $scope.subcategories = dataFiltered.subcategoria;
-    // ASIGNA CATEGORIA A LA URL
-    $scope.categoryURL = $routeParams.catId;
+    $scope.categoryNestedMenu = function(url){
+
+      console.log( $scope.categories , url );
+      // ARMA MENU FILTROS
+      $scope.categories = $rootScope.categoriesData;
+
+      // BUSCA EL VALOR DEL MENU EN CATEGORIAS
+      var dataFiltered = $filter('filter')( $scope.categories, function (d) { return d.name === url; })[0];
+
+      // SI TIENE SUBCATEGORIA NESTEA EL MENU
+      if( dataFiltered.subcategoria !== undefined ){
+        $scope.categories = dataFiltered.subcategoria;
+        $scope.categoryOrder = 'name';
+      }
+
+    }
   
   }])
 

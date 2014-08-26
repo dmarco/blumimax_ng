@@ -8,90 +8,100 @@
       "subcategoria": [
         {
           "id": 0, 
-          "name": "bombas autocebantes"
+          "name": "bombas autocebantes",
+          "subcategoria": [
+            {
+              "id": 0, 
+              "name": "la puta que te pario"
+            },
+            {
+              "id": 1, 
+              "name": "hijo de puta"
+            }
+          ]
         },
         {
-          "id": 0, 
+          "id": 1, 
           "name": "bombas autodrenantes"
         },  
         {
-          "id": 0, 
+          "id": 2, 
           "name": "bombas centrífugas"
         },
         {
-          "id": 0, 
+          "id": 3, 
           "name": "filtros para piscinas tradicionales"
         },
         {
-          "id": 0, 
+          "id": 4, 
           "name": "filtros portátiles"
         },
         {
-          "id": 0, 
+          "id": 5, 
           "name": "carga filtrante"
         },
         {
-          "id": 0, 
+          "id": 6, 
           "name": "clorinador de agua para piscinas"
         },
         {
-          "id": 0, 
+          "id": 7, 
           "name": "limpia fondos"
         },
         {
-          "id": 0, 
+          "id": 8, 
           "name": "mangueras"
         },
         {
-          "id": 0, 
+          "id": 9, 
           "name": "boyas dosificadoras de cloro"
         },
         {
-          "id": 0, 
+          "id": 10, 
           "name": "cuchara dosificadora de cloro"
         },
         {
-          "id": 0, 
+          "id": 11, 
           "name": "escaleras"
         },
         {
-          "id": 0, 
+          "id": 12, 
           "name": "multiválvulas"
         },
         {
-          "id": 0, 
+          "id": 13, 
           "name": "skimmer"
         },
         {
-          "id": 0, 
+          "id": 14, 
           "name": "toma de fondo"
         },
         {
-          "id": 0, 
+          "id": 15, 
           "name": "trampa de pelos"
         },
         {
-          "id": 0, 
+          "id": 16, 
           "name": "acoples"
         },
         {
-          "id": 0, 
+          "id": 17, 
           "name": "retornos orientables"
         },
         {
-          "id": 0, 
+          "id": 18, 
           "name": "iluminación"
         },
         {
-          "id": 0, 
+          "id": 19, 
           "name": "saca hojas"
         },
         {
-          "id": 0, 
+          "id": 20, 
           "name": "laboratorio"
         },
         {
-          "id": 0, 
+          "id": 21, 
           "name": "productos químicos"
         }
       ]
@@ -105,7 +115,7 @@
           "name": "eléctricos honda"
         },
         {
-          "id": 0, 
+          "id": 1, 
           "name": "powered by honda"
         }
       ]
@@ -129,7 +139,7 @@
           "name": "cortadoras de cesped"
         },
         {
-          "id": 0, 
+          "id": 1, 
           "name": "motoguadañas"
         }
       ]
@@ -143,7 +153,7 @@
           "name": "estacionarios honda"
         },
         {
-          "id": 0, 
+          "id": 1, 
           "name": "motores motorarg"
         }
       ]
@@ -157,19 +167,19 @@
           "name": "motores eléctricos monofásicos"
         },
         {
-          "id": 0, 
+          "id": 1, 
           "name": "motores eléctricos trifásicos"
         },
         {
-          "id": 0, 
+          "id": 2, 
           "name": "presurización/circulación"
         },
         {
-          "id": 0, 
+          "id": 3, 
           "name": "circuladoras para agua caliente"
         },
         {
-          "id": 0, 
+          "id": 4, 
           "name": "circuladoras con purgador de aire"
         }
       ]
@@ -183,7 +193,7 @@
           "name": "powered by honda"
         },
         {
-          "id": 0, 
+          "id": 1, 
           "name": "motosoldadoras dogo"
         }
       ]
@@ -197,25 +207,22 @@
           "name": "eaton"
         },
         {
-          "id": 0, 
+          "id": 1, 
           "name": "emerson"
         }
       ]
     },
     {
       "id": 8, 
-      "name": "estabilizadores de tensión",
-      "subcategoria": false
+      "name": "estabilizadores de tensión"
     },
     {
       "id": 9, 
-      "name": "inversores de tensión",
-      "subcategoria": false
+      "name": "inversores de tensión"
     },
     {
       "id": 10, 
-      "name": "compresores",
-      "subcategoria": false
+      "name": "compresores"
     }
 
   ],

@@ -1,4 +1,4 @@
-<div class="row row-offcanvas row-offcanvas-right">
+<div class="row row-offcanvas row-offcanvas-right" ng-controller="CategoryFilterCtrl">
   
   <!-- FILTRO CATEGORIA -->
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas" role="navigation">
@@ -6,7 +6,11 @@
 
       <ul class="list-group">
         <li class="list-group-item" ng-repeat="category in categories | orderBy:categoryOrder">
-          <a href="/productos/{{ category.name | nospace }}">{{ category.name | noaccents }}</a>
+          <a 
+            ng-click="categoryNestedMenu(category.name)" 
+            href="/productos/{{ category.name | nospace | noaccents }}">
+            {{ category.name }}
+          </a>
         </li>
       </ul>
     
